@@ -20,10 +20,10 @@ public class filesupload {
         String suffixName = fileName.substring(fileName.lastIndexOf("."));
         //重新生成文件名
         fileName = UUID.randomUUID()+suffixName;
-        //指定本地文件夹存储图片
+        //指定本地文件夹存储文件
         String filePath = "D:/SpringBoot/demo/src/main/resources/static/";
         try {
-            //将图片保存到static文件夹里
+            //将文件保存到static文件夹里
             fileUpload.transferTo(new File(filePath+fileName));
             return new Massage(0,"success to upload");
         } catch (Exception e) {
